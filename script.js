@@ -5,9 +5,9 @@ function updateClocks() {
         { city: "Tokyo", zone: "Asia/Tokyo" },
         { city: "Sydney", zone: "Australia/Sydney" },
         { city: "Chicago", zone: "America/Chicago" },
-        { city: "Tuscany", zone: "Europe/Rome" }, // Assuming Tuscany follows Rome's time zone
-        { city: "Wales", zone: "Europe/London" }, // Wales follows the same time zone as London
-        { city: "Austin", zone: "America/Chicago" }, // Austin follows the same time zone as Chicago
+        { city: "Tuscany", zone: "Europe/Rome" }, 
+        { city: "Wales", zone: "Europe/London" }, 
+        { city: "Austin", zone: "America/Chicago" }, 
         { city: "UTC", zone: "UTC" }
     ];
     const clocksContainer = document.getElementById('clocks');
@@ -30,4 +30,4 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(updateClocks, 1000); // Update clocks every second
 });
 
-// Additional JavaScript code for other functionalities can be added here
+
