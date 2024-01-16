@@ -137,3 +137,11 @@ body {
     height: auto;
     border-radius: var(--border-radius); /* Rounded corners for the image */
 }
+.clocks-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Center clock items vertically */
+    gap: 15px;
+    margin-top: 20px;
+}
