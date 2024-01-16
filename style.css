@@ -64,6 +64,11 @@ canvas#headerCanvas {
 }
 
 .loader {
-
+    background-image: url('path/to/image.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
 }
 
