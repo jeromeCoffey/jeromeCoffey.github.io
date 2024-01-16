@@ -108,25 +108,29 @@ body {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     text-align: center;
-    /* Optional: Specify a fixed width for uniformity */
+    width: 200px; /* Fixed width for each clock */
+    margin: 0 auto; /* Center the clock within the container */
 }
 
 /* Mobile-friendly styles */
 @media (max-width: 768px) {
     .clocks-container {
-        flex-direction: column; /* Stack clock items vertically on smaller screens */
-        align-items: center; /* Ensure items are centered in the column */
+        /* ... existing styles ... */
     }
 
     .clock {
-        width: 100%; /* Full width for each clock */
+        width: 90%; /* Adjust width for mobile devices */
         margin-bottom: 10px; /* Space between clocks */
     }
 
-    /* Adjust about-section layout for mobile */
-    .about-section {
-        flex-direction: column;
-    }
+    /* ... other styles ... */
 }
 
 /* ... remaining styles ... */
+
+
+    .about-section {
+        flex-direction: column;
+    }
+
+
