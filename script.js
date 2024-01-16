@@ -7,11 +7,13 @@ function updateClocks() {
         { city: "Chicago", zone: "America/Chicago" },
         { city: "Tuscany", zone: "Europe/Rome" }, 
         { city: "Wales", zone: "Europe/London" }, 
-        { city: "Austin", zone: "America/Chicago" }, 
+        { city: "Austin", zone: "America/Chicago" },
+        { city: "New Delhi", zone: "Asia/Kolkata" },
+        { city: "Moscow", zone: "Europe/Moscow" }, 
         { city: "UTC", zone: "UTC" }
     ];
     const clocksContainer = document.getElementById('clocks');
-    let clocksHtml = ''; // Store clocks HTML
+    let clocksHtml = ''; 
 
     timeZones.forEach(({ city, zone }) => {
         const time = new Date().toLocaleTimeString('en-US', { timeZone: zone });
