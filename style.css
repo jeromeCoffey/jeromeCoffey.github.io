@@ -37,6 +37,7 @@ canvas#headerCanvas {
     text-align: center;
 }
 
+/* Flexbox layout for the clocks container */
 .clocks-container {
     display: flex;
     flex-wrap: wrap;
@@ -63,6 +64,12 @@ canvas#headerCanvas {
     font-size: 1.2em;
 }
 
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .loader {
     background-image: url('path/to/image.jpg');
     background-size: cover;
@@ -70,6 +77,7 @@ canvas#headerCanvas {
     width: 100px;
     height: 100px;
     margin: 0 auto;
+    border-radius: 50%; /* Makes the loader circular */
 }
 
 /* Mobile-friendly styles */
@@ -77,5 +85,33 @@ canvas#headerCanvas {
     .loader {
         width: 50px;
         height: 50px;
+        background-size: contain;
     }
+
+    .clocks-container {
+        flex-direction: column;
+    }
+
+    .clock {
+        width: 100%;
+    }
+
+    /* Adjust about-section layout for mobile */
+    .about-section {
+        flex-direction: column;
+    }
+}
+
+/* Image container for responsive image */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Optional: in case of large images */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: for rounded corners */
 }
