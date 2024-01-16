@@ -17,12 +17,6 @@ body {
     overflow-x: hidden;
 }
 
-:root {
-    /* ... your existing CSS variables ... */
-}
-
-/* ... other styles ... */
-
 .about-section, .world-clock-section {
     background-color: var(--primary-color);
     padding: 20px;
@@ -30,40 +24,17 @@ body {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     text-align: center;
-    display: flex; /* Use flexbox */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-}
-
-.clocks-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center clock items horizontally */
-    gap: 15px;
-    margin-top: 20px;
-    width: 100%; /* Use the full width of the parent container */
-}
-
-.clock {
-    /* ... existing clock styles ... */
-    /* Add fixed width or max-width if necessary */
-}
-
-/* ... other styles ... */
-
-/* Mobile-friendly styles */
-@media (max-width: 768px) {
-    /* ... existing mobile styles ... */
-    .clocks-container {
-        flex-direction: column; /* Stack clock items vertically on smaller screens */
-    }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .clocks-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 15px;
     margin-top: 20px;
 }
@@ -86,23 +57,6 @@ body {
     font-size: 1.2em;
 }
 
-.loader-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.loader {
-    background-image: url('path/to/image.jpg'); /* Replace with actual loader image */
-    background-size: cover;
-    background-position: center;
-    width: var(--loader-size);
-    height: var(--loader-size);
-    margin: 0 auto;
-    border-radius: 50%; /* Circular loader */
-}
-
-/* Mobile-friendly styles */
 @media (max-width: 768px) {
     .loader {
         width: var(--loader-size-mobile);
@@ -118,30 +72,61 @@ body {
         width: 100%;
     }
 
+    .about-section {
+        flex-direction: column;
+    }
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+/* ... existing styles ... */
+
+/* Flexbox layout for the clocks container */
+.clocks-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center clock items horizontally */
+    align-items: center; /* Center clock items vertically */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.clock {
+    padding: 15px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    /* Optional: Specify a fixed width for uniformity */
+}
+
+/* Mobile-friendly styles */
+@media (max-width: 768px) {
+    .clocks-container {
+        flex-direction: column; /* Stack clock items vertically on smaller screens */
+        align-items: center; /* Ensure items are centered in the column */
+    }
+
+    .clock {
+        width: 100%; /* Full width for each clock */
+        margin-bottom: 10px; /* Space between clocks */
+    }
+
     /* Adjust about-section layout for mobile */
     .about-section {
         flex-direction: column;
     }
 }
 
-/* Image container for responsive image */
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* In case of large images */
-}
-
-.image-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: var(--border-radius); /* Rounded corners for the image */
-}
-.clocks-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center; /* Center clock items vertically */
-    gap: 15px;
-    margin-top: 20px;
-}
+/* ... remaining styles ... */

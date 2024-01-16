@@ -5,11 +5,11 @@ function updateClocks() {
         { city: "Tokyo", zone: "Asia/Tokyo" },
         { city: "Sydney", zone: "Australia/Sydney" },
         { city: "Chicago", zone: "America/Chicago" },
-        { city: "Tuscany", zone: "Europe/Rome" }, 
-        { city: "Wales", zone: "Europe/London" }, 
+        { city: "Tuscany", zone: "Europe/Rome" },
+        { city: "Wales", zone: "Europe/London" },
         { city: "Austin", zone: "America/Chicago" },
         { city: "New Delhi", zone: "Asia/Kolkata" },
-        { city: "Moscow", zone: "Europe/Moscow" }, 
+        { city: "Moscow", zone: "Europe/Moscow" },
         { city: "UTC", zone: "UTC" }
     ];
     const clocksContainer = document.getElementById('clocks');
@@ -24,12 +24,10 @@ function updateClocks() {
             </div>`;
     });
 
-    clocksContainer.innerHTML = clocksHtml; // Set clocks HTML
+    clocksContainer.innerHTML = clocksHtml;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
     updateClocks();
     setInterval(updateClocks, 1000); // Update clocks every second
 });
-
-
