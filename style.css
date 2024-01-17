@@ -1,11 +1,11 @@
 :root {
     --primary-color: rgba(0, 77, 0, 0.8);
-    --secondary-color: #d4af37;
+    --secondary-color: #d4af37; /* Gold color for clocks */
     --text-color: #003300;
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    --loader-size: 100px;
-    --loader-size-mobile: 50px;
     --border-radius: 8px;
+    --image-width: 600px; /* Width of the first image */
+    --image-height: 400px; /* Height of the first image */
 }
 
 body {
@@ -15,140 +15,62 @@ body {
     background: linear-gradient(to right, #004d00, #003300);
     color: var(--secondary-color);
     overflow-x: hidden;
+    text-align: center; /* Center everything */
 }
 
-.about-section, .world-clock-section {
-    background-color: var(--primary-color);
-    padding: 20px;
+section {
     margin: 10px 0;
+    padding: 20px;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.clocks-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.clock {
-    padding: 15px;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    text-align: center;
-}
-
-.clock-city {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.clock-time {
-    font-size: 1.2em;
-}
-
-@media (max-width: 768px) {
-    .loader {
-        width: var(--loader-size-mobile);
-        height: var(--loader-size-mobile);
-        background-size: contain;
-    }
-
-    .clocks-container {
-        flex-direction: column;
-    }
-
-    .clock {
-        width: 100%;
-    }
-
-    .about-section {
-        flex-direction: column;
-    }
 }
 
 .image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    margin: 10px auto;
 }
 
-.image-container img {
+.about-image, .book-image, .certificate-image {
     max-width: 100%;
-    height: auto;
+    height: auto; /* Adjusts height automatically to maintain aspect ratio */
     border-radius: var(--border-radius);
 }
-/* ... existing styles ... */
 
-/* Flexbox layout for the clocks container */
+.my-book-section, .world-clock-section, .about-section, .certificate-section {
+    background-color: var(--primary-color);
+}
+
+.book-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-top: 15px;
+}
+
+.book-link:hover {
+    background-color: lighten(var(--secondary-color), 10%);
+}
+
 .clocks-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center clock items horizontally */
-    align-items: center; /* Center clock items vertically */
+    justify-content: center;
+    align-items: center;
     gap: 15px;
     margin-top: 20px;
 }
 
 .clock {
     padding: 15px;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color); /* Gold background for clocks */
     color: var(--text-color);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     text-align: center;
-    width: 200px; /* Fixed width for each clock */
-    margin: 0 auto; /* Center the clock within the container */
-}
-
-/* Mobile-friendly styles */
-@media (max-width: 768px) {
-    .clocks-container {
-        /* ... existing styles ... */
-    }
-
-    .clock {
-        width: 90%; /* Adjust width for mobile devices */
-        margin-bottom: 10px; /* Space between clocks */
-    }
-
-    /* ... other styles ... */
-}
-
-/* ... remaining styles ... */
-
-
-    .about-section {
-        flex-direction: column;
-    }
-
-    .my-book-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        height: 200px; /* Adjust the height as needed */
-    }
-    
-    .book-content {
-        /* Add any additional styling you want for the content itself */
-    }
-    
-    .book-image {
-        max-width: 100%; /* ensures the image is responsive */
-        height: auto; /* maintain aspect ratio */
-        margin: 0 auto; /* centers the image if its width is less than the container's width */
-        display: block; /* to enable margin auto */
-    }
-    
+    width: 200px
