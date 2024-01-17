@@ -133,4 +133,22 @@ body {
         flex-direction: column;
     }
 
-
+    .my-book-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 200px; /* Adjust the height as needed */
+    }
+    
+    .book-content {
+        /* Add any additional styling you want for the content itself */
+    }
+    
+    .book-image {
+        max-width: 100%; /* ensures the image is responsive */
+        height: auto; /* maintain aspect ratio */
+        margin: 0 auto; /* centers the image if its width is less than the container's width */
+        display: block; /* to enable margin auto */
+    }
+    
